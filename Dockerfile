@@ -1,11 +1,10 @@
 # Estágio 1: Build (Compilação do código)
-FROM eclipse-temurin:21-jdk-alpine AS build
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 
 COPY . .
 
-RUN chmod +x ./mvnw
-RUN ./mvnw clean package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Estágio 2: Run (Execução da API)
 FROM eclipse-temurin:21-jre-alpine
