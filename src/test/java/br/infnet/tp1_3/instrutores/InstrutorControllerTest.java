@@ -32,12 +32,12 @@ public class InstrutorControllerTest {
 
     @Test
     void deveTestarListagemERemocao() {
-        // Testando o GET
+
         Mockito.when(service.listarTodos()).thenReturn(java.util.Arrays.asList(new Instrutor()));
         ResponseEntity<java.util.List<Instrutor>> resGet = controller.listar();
         Assertions.assertEquals(HttpStatus.OK, resGet.getStatusCode());
 
-        // Testando o DELETE
+
         ResponseEntity<Void> resDel = controller.remover("123");
         Assertions.assertEquals(HttpStatus.NO_CONTENT, resDel.getStatusCode());
     }

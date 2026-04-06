@@ -16,7 +16,7 @@ public class Instrutor {
     @Column(nullable = false)
     private String nome;
 
-    // Adicionamos o registro da CNH de volta!
+
     @Column(unique = true)
     private String registroCnh;
 

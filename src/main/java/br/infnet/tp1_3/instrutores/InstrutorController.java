@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/instrutores")
-@CrossOrigin(origins = "*") // Essencial para o React conseguir acessar!
+@CrossOrigin(origins = "*")
 public class InstrutorController {
 
     private final InstrutorService service;
